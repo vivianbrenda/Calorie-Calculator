@@ -1,0 +1,572 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.38 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.39 secs
+ 
+--> Reading design: testBench.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "testBench.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "testBench"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : testBench
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../../lab 8/lab8/7segment.v" in library work
+Module <controller47> compiled
+Module <mod4> compiled
+Module <decoder47> compiled
+Module <mux164> compiled
+Module <decoder24> compiled
+Module <mux41> compiled
+Compiling verilog file "code.v" in library work
+Module <prog_timer> compiled
+Module <mod6counter> compiled
+Module <mod10counter> compiled
+Module <srLatch> compiled
+Module <counterBlock> compiled
+Module <testBench> compiled
+No errors in compilation
+Analysis of file <"testBench.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <testBench> in library <work>.
+
+Analyzing hierarchy for module <counterBlock> in library <work>.
+
+Analyzing hierarchy for module <prog_timer> in library <work>.
+
+Analyzing hierarchy for module <srLatch> in library <work>.
+
+Analyzing hierarchy for module <controller47> in library <work>.
+
+Analyzing hierarchy for module <mod10counter> in library <work>.
+
+Analyzing hierarchy for module <mod6counter> in library <work>.
+
+Analyzing hierarchy for module <prog_timer> in library <work>.
+
+Analyzing hierarchy for module <mod4> in library <work>.
+
+Analyzing hierarchy for module <mux164> in library <work>.
+
+Analyzing hierarchy for module <decoder47> in library <work>.
+
+Analyzing hierarchy for module <mux41> in library <work>.
+
+Analyzing hierarchy for module <decoder24> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <testBench>.
+Module <testBench> is correct for synthesis.
+ 
+Analyzing module <counterBlock> in library <work>.
+Module <counterBlock> is correct for synthesis.
+ 
+Analyzing module <mod10counter> in library <work>.
+Module <mod10counter> is correct for synthesis.
+ 
+Analyzing module <mod6counter> in library <work>.
+Module <mod6counter> is correct for synthesis.
+ 
+Analyzing module <prog_timer> in library <work>.
+Module <prog_timer> is correct for synthesis.
+ 
+Analyzing module <srLatch> in library <work>.
+Module <srLatch> is correct for synthesis.
+ 
+Analyzing module <controller47> in library <work>.
+Module <controller47> is correct for synthesis.
+ 
+Analyzing module <mod4> in library <work>.
+Module <mod4> is correct for synthesis.
+ 
+Analyzing module <mux164> in library <work>.
+Module <mux164> is correct for synthesis.
+ 
+Analyzing module <decoder47> in library <work>.
+Module <decoder47> is correct for synthesis.
+ 
+Analyzing module <mux41> in library <work>.
+Module <mux41> is correct for synthesis.
+ 
+Analyzing module <decoder24> in library <work>.
+Module <decoder24> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <prog_timer>.
+    Related source file is "../../lab 8/lab8/7segment.v".
+    Found 24-bit down counter for signal <counter>.
+    Found 1-bit register for signal <tp>.
+    Found 1-bit register for signal <zero>.
+    Found 24-bit subtractor for signal <counter$mux0000>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <prog_timer> synthesized.
+
+
+Synthesizing Unit <srLatch>.
+    Related source file is "code.v".
+WARNING:Xst:1780 - Signal <w2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <srLatch> synthesized.
+
+
+Synthesizing Unit <mod10counter>.
+    Related source file is "code.v".
+    Found 4-bit up counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <mod10counter> synthesized.
+
+
+Synthesizing Unit <mod6counter>.
+    Related source file is "code.v".
+    Found 3-bit up counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <mod6counter> synthesized.
+
+
+Synthesizing Unit <mod4>.
+    Related source file is "../../lab 8/lab8/7segment.v".
+    Found 2-bit up counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <mod4> synthesized.
+
+
+Synthesizing Unit <mux164>.
+    Related source file is "../../lab 8/lab8/7segment.v".
+    Found 4-bit 4-to-1 multiplexer for signal <q>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <mux164> synthesized.
+
+
+Synthesizing Unit <decoder47>.
+    Related source file is "../../lab 8/lab8/7segment.v".
+    Found 16x7-bit ROM for signal <out>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decoder47> synthesized.
+
+
+Synthesizing Unit <mux41>.
+    Related source file is "../../lab 8/lab8/7segment.v".
+    Found 1-bit 4-to-1 multiplexer for signal <q>.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux41> synthesized.
+
+
+Synthesizing Unit <decoder24>.
+    Related source file is "../../lab 8/lab8/7segment.v".
+    Found 4-bit shifter logical right for signal <q>.
+    Summary:
+	inferred   1 Combinational logic shifter(s).
+Unit <decoder24> synthesized.
+
+
+Synthesizing Unit <counterBlock>.
+    Related source file is "code.v".
+WARNING:Xst:646 - Signal <clken> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <counterBlock> synthesized.
+
+
+Synthesizing Unit <controller47>.
+    Related source file is "../../lab 8/lab8/7segment.v".
+WARNING:Xst:646 - Signal <tp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <controller47> synthesized.
+
+
+Synthesizing Unit <testBench>.
+    Related source file is "code.v".
+WARNING:Xst:646 - Signal <tp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <d2tmp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <testBench> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 24-bit subtractor                                     : 2
+# Counters                                             : 7
+ 2-bit up counter                                      : 1
+ 24-bit down counter                                   : 2
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 4
+ 1-bit register                                        : 4
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 4-bit shifter logical right                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 24-bit subtractor                                     : 2
+# Counters                                             : 7
+ 2-bit up counter                                      : 1
+ 24-bit down counter                                   : 2
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 4-bit shifter logical right                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit testBench : the following signal(s) form a combinatorial loop: sr/q_or0000.
+
+Optimizing unit <testBench> ...
+
+Optimizing unit <prog_timer> ...
+
+Optimizing unit <controller47> ...
+WARNING:Xst:2677 - Node <t1/tp> of sequential type is unconnected in block <testBench>.
+WARNING:Xst:2677 - Node <seg7/t/tp> of sequential type is unconnected in block <testBench>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block testBench, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 67
+ Flip-Flops                                            : 67
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : testBench.ngr
+Top Level Output File Name         : testBench
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 273
+#      GND                         : 1
+#      INV                         : 53
+#      LUT1                        : 2
+#      LUT2                        : 36
+#      LUT2_D                      : 1
+#      LUT3                        : 36
+#      LUT3_D                      : 1
+#      LUT4                        : 29
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+#      MUXCY                       : 59
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 67
+#      FDCE                        : 2
+#      FDCPE                       : 48
+#      FDE                         : 2
+#      FDRE                        : 15
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 3
+#      OBUF                        : 14
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       85  out of   4656     1%  
+ Number of Slice Flip Flops:             67  out of   9312     0%  
+ Number of 4 input LUTs:                160  out of   9312     1%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    232     7%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 67    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+N0(XST_GND:G)                      | NONE(seg7/t/counter_0) | 73    |
+reset                              | IBUF                   | 25    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.348ns (Maximum Frequency: 157.530MHz)
+   Minimum input arrival time before clock: 7.110ns
+   Maximum output required time after clock: 8.104ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.348ns (frequency: 157.530MHz)
+  Total number of paths / destination ports: 2096 / 99
+-------------------------------------------------------------------------
+Delay:               6.348ns (Levels of Logic = 3)
+  Source:            c1/thousandth/q_2 (FF)
+  Destination:       c1/thousandth/q_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: c1/thousandth/q_2 to c1/thousandth/q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.591   0.762  c1/thousandth/q_2 (c1/thousandth/q_2)
+     LUT2:I0->O            1   0.704   0.424  c1/thousandth/clken_and0000_SW0 (N2)
+     LUT4:I3->O           10   0.704   0.961  c1/thousandth/clken_and0000 (c1/r1)
+     LUT2:I1->O            4   0.704   0.587  c1/thousandth/q_or00001 (c1/thousandth/q_or0000)
+     FDRE:R                    0.911          c1/thousandth/q_0
+    ----------------------------------------
+    Total                      6.348ns (3.614ns logic, 2.734ns route)
+                                       (56.9% logic, 43.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 139 / 65
+-------------------------------------------------------------------------
+Offset:              7.110ns (Levels of Logic = 5)
+  Source:            sett (PAD)
+  Destination:       t1/counter_11 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sett to t1/counter_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.595  sett_IBUF (sett_IBUF)
+     LUT3:I0->O            3   0.704   0.706  sr/q_or00001 (sr/q_or0000)
+     LUT4:I0->O            1   0.704   0.000  t1/counter_and0000_wg_lut<6> (t1/counter_and0000_wg_lut<6>)
+     MUXCY:S->O           25   0.736   1.435  t1/counter_and0000_wg_cy<6> (t1/counter_and0000)
+     LUT3:I0->O            1   0.704   0.000  t1/counter_Q_mux0000<11>1 (t1/counter_Q_mux0000<11>)
+     FDCPE:D                   0.308          t1/counter_11
+    ----------------------------------------
+    Total                      7.110ns (4.374ns logic, 2.736ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 200 / 14
+-------------------------------------------------------------------------
+Offset:              8.104ns (Levels of Logic = 4)
+  Source:            seg7/m4/q_0 (FF)
+  Destination:       seg<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: seg7/m4/q_0 to seg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             16   0.591   1.209  seg7/m4/q_0 (seg7/m4/q_0)
+     LUT3:I0->O            1   0.704   0.000  seg7/m16/Mmux_q_3 (seg7/m16/Mmux_q_3)
+     MUXF5:I1->O           7   0.321   0.883  seg7/m16/Mmux_q_2_f5 (seg7/w2<0>)
+     LUT4:I0->O            1   0.704   0.420  seg7/d1/Mrom_out31 (seg_3_OBUF)
+     OBUF:I->O                 3.272          seg_3_OBUF (seg<3>)
+    ----------------------------------------
+    Total                      8.104ns (5.592ns logic, 2.512ns route)
+                                       (69.0% logic, 31.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.74 secs
+ 
+--> 
+
+Total memory usage is 259808 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

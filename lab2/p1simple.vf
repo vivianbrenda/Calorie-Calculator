@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : p1simple.vf
+// /___/   /\     Timestamp : 01/27/2015 15:13:16
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "J:/ecen 220/lab2/p1simple.vf" -w "J:/ecen 220/lab2/p1simple.sch"
+//Design Name: p1simple
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module p1simple(A, 
+                B, 
+                C, 
+                D, 
+                F2);
+
+    input A;
+    input B;
+    input C;
+    input D;
+   output F2;
+   
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_29;
+   
+   AND3  XLXI_9 (.I0(D), 
+                .I1(XLXN_29), 
+                .I2(XLXN_28), 
+                .O(F2));
+   OR2  XLXI_10 (.I0(XLXN_27), 
+                .I1(XLXN_26), 
+                .O(XLXN_28));
+   INV  XLXI_11 (.I(A), 
+                .O(XLXN_26));
+   INV  XLXI_12 (.I(B), 
+                .O(XLXN_27));
+   INV  XLXI_13 (.I(C), 
+                .O(XLXN_29));
+endmodule

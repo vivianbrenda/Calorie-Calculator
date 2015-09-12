@@ -1,0 +1,10 @@
+Command line:
+   down13counter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51330
+
+Tue Mar 24 17:17:53 2015
+
+
+ Elaboration Time: 0.218401 sec

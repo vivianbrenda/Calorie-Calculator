@@ -1,0 +1,30 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o J:/ecen 220/lab4/lab4/finalfinal_isim_beh.exe -prj J:/ecen 220/lab4/lab4/finalfinal_beh.prj work.finalfinal work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 24
+Turning on mult-threading, number of parallel sub-compilation jobs: 48 
+Determining compilation order of HDL files
+Analyzing Verilog file "J:/ecen 220/lab4/lab4/newrom.vf" into library work
+Analyzing Verilog file "J:/ecen 220/lab4/lab4/abc.vf" into library work
+Analyzing Verilog file "J:/ecen 220/lab4/lab4/finalcombined.vf" into library work
+Analyzing Verilog file "J:/ecen 220/lab4/lab4/finalfinal.vf" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 143084 KB
+Fuse CPU Usage: 655 ms
+Compiling module AND4
+Compiling module INV
+Compiling module OR4
+Compiling module AND3
+Compiling module OR3
+Compiling module abc_MUSER_finalfinal
+Compiling module ROM16X1(INIT=16'b100001001001001...
+Compiling module newrom_MUSER_finalfinal
+Compiling module finalcombined_MUSER_finalfinal
+Compiling module finalfinal
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 14 Verilog Units
+Built simulation executable J:/ecen 220/lab4/lab4/finalfinal_isim_beh.exe
+Fuse Memory Usage: 175900 KB
+Fuse CPU Usage: 1029 ms

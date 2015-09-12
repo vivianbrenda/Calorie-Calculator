@@ -1,0 +1,10 @@
+wave add / -radix hex
+
+isim force add clk 0 -time 0 -value 1 -time 10ns -repeat 20ns
+isim force add inc 1
+isim force add reset 1 -time 0 -value 0 -time 20ns
+
+#isim force add set 0 -time 0 -value 1 -time 20ns
+#isim force add reset 1 -time 0 -value 0 -time 10ns -value 1 -time 30ns
+
+run 50000ns

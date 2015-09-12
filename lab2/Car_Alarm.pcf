@@ -1,0 +1,11 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Jan 27 15:44:35 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Alarm" LOCATE = SITE "R4" LEVEL 1;
+COMP "Door" LOCATE = SITE "R17" LEVEL 1;
+COMP "Key" LOCATE = SITE "N17" LEVEL 1;
+COMP "Seat" LOCATE = SITE "L13" LEVEL 1;
+SCHEMATIC END;
+

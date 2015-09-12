@@ -1,0 +1,9 @@
+MO decoder24 NULL flipflop.v vlg60/decoder24.bin 1425430030
+MO register4word NULL flipflop.v vlg01/register4word.bin 1425430031
+MO mux164 NULL flipflop.v vlg59/mux164.bin 1425430031
+MO register4bit NULL flipflop.v vlg10/register4bit.bin 1425430030
+MO register1bit NULL flipflop.v vlg19/register1bit.bin 1425430030
+MO testBench NULL flipflop.v vlg4C/test_bench.bin 1425430031
+MO mux21 NULL flipflop.v vlg21/mux21.bin 1425430030
+MO registerComplete NULL flipflop.v vlg7A/register_complete.bin 1425430031
+MO fd_c NULL flipflop.v vlg50/fd__c.bin 1425430030

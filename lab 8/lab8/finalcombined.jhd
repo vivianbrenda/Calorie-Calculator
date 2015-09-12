@@ -1,0 +1,5 @@
+MODULE finalcombined
+	SUBMODULE abc
+		INSTANCE XLXI_1
+	SUBMODULE newrom
+		INSTANCE XLXI_6

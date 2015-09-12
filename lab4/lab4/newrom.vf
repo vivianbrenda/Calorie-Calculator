@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : newrom.vf
+// /___/   /\     Timestamp : 02/03/2015 16:35:57
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "J:/ecen 220/lab4/lab4/newrom.vf" -w "J:/ecen 220/lab4/lab4/newrom.sch"
+//Design Name: newrom
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module newrom(N0, 
+              N1, 
+              N2, 
+              N3, 
+              D, 
+              E, 
+              F, 
+              G);
+
+    input N0;
+    input N1;
+    input N2;
+    input N3;
+   output D;
+   output E;
+   output F;
+   output G;
+   
+   
+   ROM16X1 #( .INIT(16'h8492) ) XLXI_1 (.A0(N0), 
+                   .A1(N1), 
+                   .A2(N2), 
+                   .A3(N3), 
+                   .O(D));
+   ROM16X1 #( .INIT(16'h02BA) ) XLXI_2 (.A0(N0), 
+                   .A1(N1), 
+                   .A2(N2), 
+                   .A3(N3), 
+                   .O(E));
+   ROM16X1 #( .INIT(16'h208E) ) XLXI_3 (.A0(N0), 
+                   .A1(N1), 
+                   .A2(N2), 
+                   .A3(N3), 
+                   .O(F));
+   ROM16X1 #( .INIT(16'h1083) ) XLXI_4 (.A0(N0), 
+                   .A1(N1), 
+                   .A2(N2), 
+                   .A3(N3), 
+                   .O(G));
+endmodule

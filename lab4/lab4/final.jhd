@@ -1,0 +1,3 @@
+MODULE final
+	SUBMODULE finalcombined
+		INSTANCE XLXI_6

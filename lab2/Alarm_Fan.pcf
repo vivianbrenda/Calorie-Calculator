@@ -1,0 +1,12 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Jan 27 15:03:02 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Alarm" LOCATE = SITE "R4" LEVEL 1;
+COMP "Battery" LOCATE = SITE "N17" LEVEL 1;
+COMP "High_Temp" LOCATE = SITE "L13" LEVEL 1;
+COMP "Fan" LOCATE = SITE "F4" LEVEL 1;
+COMP "Cord" LOCATE = SITE "R17" LEVEL 1;
+SCHEMATIC END;
+

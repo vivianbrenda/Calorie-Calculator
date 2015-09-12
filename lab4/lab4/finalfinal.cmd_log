@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "J:/ecen 220/lab4/lab4/finalfinal.xst" -ofn "J:/ecen 220/lab4/lab4/finalfinal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 "finalfinal.ngc" finalfinal.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o finalfinal_map.ncd finalfinal.ngd finalfinal.pcf 
+par -w -intstyle ise -ol high -t 1 finalfinal_map.ncd finalfinal.ncd finalfinal.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml finalfinal.twx finalfinal.ncd -o finalfinal.twr finalfinal.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab4.ucf -p xc3s500e-fg320-5 "finalfinal.ngc" finalfinal.ngd  
+xst -intstyle ise -ifn "J:/ecen 220/lab4/lab4/finalfinal.xst" -ofn "J:/ecen 220/lab4/lab4/finalfinal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab4.ucf -p xc3s500e-fg320-5 "finalfinal.ngc" finalfinal.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o finalfinal_map.ncd finalfinal.ngd finalfinal.pcf 
+par -w -intstyle ise -ol high -t 1 finalfinal_map.ncd finalfinal.ncd finalfinal.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml finalfinal.twx finalfinal.ncd -o finalfinal.twr finalfinal.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f finalfinal.ut finalfinal.ncd 

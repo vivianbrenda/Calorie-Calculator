@@ -1,0 +1,81 @@
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf 
+bitgen -intstyle ise -f game.ut game.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf 
+bitgen -intstyle ise -f game.ut game.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f game.ut game.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f game.ut game.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f game.ut game.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f game.ut game.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f game.ut game.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f game.ut game.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f game.ut game.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f game.ut game.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+xst -intstyle ise -ifn "J:/ecen 220/lab11/lab11/game.xst" -ofn "J:/ecen 220/lab11/lab11/game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "game.ngc" game.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o game_map.ncd game.ngd game.pcf 
+par -w -intstyle ise -ol high -t 1 game_map.ncd game.ncd game.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml game.twx game.ncd -o game.twr game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f game.ut game.ncd 

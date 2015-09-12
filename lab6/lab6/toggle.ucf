@@ -1,0 +1,4 @@
+NET  clk       LOC=B8; # GCLK
+NET  clr        LOC=H13; # BTN3
+NET  clkout    LOC=B4; # PIO0 or IO1
+NET  q       LOC=A4; # PIO1 or IO2

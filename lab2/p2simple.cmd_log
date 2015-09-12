@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "J:/ecen 220/lab2/p2simple.xst" -ofn "J:/ecen 220/lab2/p2simple.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Car_Alarm.ucf -p xc3s500e-fg320-4 "p2simple.ngc" p2simple.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o p2simple_map.ncd p2simple.ngd p2simple.pcf 
+par -w -intstyle ise -ol high -t 1 p2simple_map.ncd p2simple.ncd p2simple.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml p2simple.twx p2simple.ncd -o p2simple.twr p2simple.pcf -ucf Car_Alarm.ucf 
+bitgen -intstyle ise -f p2simple.ut p2simple.ncd 

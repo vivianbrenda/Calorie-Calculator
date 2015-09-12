@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "J:/ecen 220/lab 10/lab10/delay.xst" -ofn "J:/ecen 220/lab 10/lab10/delay.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 "delay.ngc" delay.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o delay_map.ncd delay.ngd delay.pcf 
+par -w -intstyle ise -ol high -t 1 delay_map.ncd delay.ncd delay.pcf 

@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family spartan3e -refsym rom {J:/ecen 220/lab4/lab4/rom.sch} {J:/ecen 220/lab4/lab4/rom.sym} 
+sch2sym -intstyle ise -family spartan3e -refsym rom {J:/ecen 220/lab4/lab4/rom.sch} {J:/ecen 220/lab4/lab4/rom.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym rom {J:/ecen 220/lab4/lab4/rom.sch} {J:/ecen 220/lab4/lab4/rom.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym rom {J:/ecen 220/lab4/lab4/rom.sch} {J:/ecen 220/lab4/lab4/rom.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym rom {J:/ecen 220/lab4/lab4/rom.sch} {J:/ecen 220/lab4/lab4/rom.sym} 

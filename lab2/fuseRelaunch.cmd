@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "J:/ecen 220/lab2/p1simple_isim_beh.exe" -prj "J:/ecen 220/lab2/p1simple_beh.prj" "work.p1simple" "work.glbl" 

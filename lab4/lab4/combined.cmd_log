@@ -1,0 +1,7 @@
+sch2sym -intstyle ise -family spartan3e -refsym combined {J:/ecen 220/lab4/lab4/combined.sch} {J:/ecen 220/lab4/lab4/combined.sym} 
+sch2sym -intstyle ise -family spartan3e -refsym combined {J:/ecen 220/lab4/lab4/combined.sch} {J:/ecen 220/lab4/lab4/combined.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym combined {J:/ecen 220/lab4/lab4/combined.sch} {J:/ecen 220/lab4/lab4/combined.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym combined {J:/ecen 220/lab4/lab4/combined.sch} {J:/ecen 220/lab4/lab4/combined.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym combined {J:/ecen 220/lab4/lab4/combined.sch} {J:/ecen 220/lab4/lab4/combined.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym combined {J:/ecen 220/lab4/lab4/combined.sch} {J:/ecen 220/lab4/lab4/combined.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym combined {J:/ecen 220/lab4/lab4/combined.sch} {J:/ecen 220/lab4/lab4/combined.sym} 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "J:/ecen 220/lab 8/lab8/mod4_isim_beh.exe" -prj "J:/ecen 220/lab 8/lab8/mod4_beh.prj" "work.mod4" "work.glbl" 

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym abc {J:/ecen 220/lab4/lab4/abc.sch} {J:/ecen 220/lab4/lab4/abc.sym} 

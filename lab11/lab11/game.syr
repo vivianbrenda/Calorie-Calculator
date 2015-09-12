@@ -1,0 +1,729 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.42 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.43 secs
+ 
+--> Reading design: game.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "game.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "game"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : game
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "lab11.v" in library work
+Module <FF_DCE> compiled
+Module <FF_DCE16> compiled
+Module <FF_DCE16best> compiled
+Module <adder13> compiled
+Module <lfsr8bit> compiled
+Module <down13counter> compiled
+Module <delay> compiled
+Module <scoringUnit> compiled
+Module <controller47> compiled
+Module <mod4> compiled
+Module <decoder47> compiled
+Module <mux164> compiled
+Module <decoder24> compiled
+Module <mux41> compiled
+Module <prog_timer> compiled
+Module <stateMachine> compiled
+Module <syncro> compiled
+Module <mod10counter> compiled
+Module <mscounter> compiled
+Module <game> compiled
+No errors in compilation
+Analysis of file <"game.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <game> in library <work>.
+
+Analyzing hierarchy for module <syncro> in library <work>.
+
+Analyzing hierarchy for module <stateMachine> in library <work> with parameters.
+	s0 = "01"
+	s1 = "10"
+	s2 = "11"
+
+Analyzing hierarchy for module <mscounter> in library <work>.
+
+Analyzing hierarchy for module <delay> in library <work>.
+
+Analyzing hierarchy for module <scoringUnit> in library <work>.
+
+Analyzing hierarchy for module <prog_timer> in library <work>.
+
+Analyzing hierarchy for module <controller47> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE> in library <work>.
+
+Analyzing hierarchy for module <mod10counter> in library <work>.
+
+Analyzing hierarchy for module <lfsr8bit> in library <work>.
+
+Analyzing hierarchy for module <adder13> in library <work>.
+
+Analyzing hierarchy for module <down13counter> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE16best> in library <work>.
+
+Analyzing hierarchy for module <prog_timer> in library <work>.
+
+Analyzing hierarchy for module <mod4> in library <work>.
+
+Analyzing hierarchy for module <mux164> in library <work>.
+
+Analyzing hierarchy for module <decoder47> in library <work>.
+
+Analyzing hierarchy for module <mux41> in library <work>.
+
+Analyzing hierarchy for module <decoder24> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE> in library <work>.
+
+Analyzing hierarchy for module <FF_DCE> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <game>.
+Module <game> is correct for synthesis.
+ 
+Analyzing module <syncro> in library <work>.
+Module <syncro> is correct for synthesis.
+ 
+Analyzing module <FF_DCE> in library <work>.
+Module <FF_DCE> is correct for synthesis.
+ 
+Analyzing module <stateMachine> in library <work>.
+	s0 = 2'b01
+	s1 = 2'b10
+	s2 = 2'b11
+Module <stateMachine> is correct for synthesis.
+ 
+Analyzing module <mscounter> in library <work>.
+Module <mscounter> is correct for synthesis.
+ 
+Analyzing module <mod10counter> in library <work>.
+Module <mod10counter> is correct for synthesis.
+ 
+Analyzing module <delay> in library <work>.
+Module <delay> is correct for synthesis.
+ 
+Analyzing module <lfsr8bit> in library <work>.
+Module <lfsr8bit> is correct for synthesis.
+ 
+Analyzing module <adder13> in library <work>.
+Module <adder13> is correct for synthesis.
+ 
+Analyzing module <down13counter> in library <work>.
+Module <down13counter> is correct for synthesis.
+ 
+Analyzing module <scoringUnit> in library <work>.
+Module <scoringUnit> is correct for synthesis.
+ 
+Analyzing module <FF_DCE16best> in library <work>.
+Module <FF_DCE16best> is correct for synthesis.
+ 
+Analyzing module <prog_timer> in library <work>.
+Module <prog_timer> is correct for synthesis.
+ 
+Analyzing module <controller47> in library <work>.
+Module <controller47> is correct for synthesis.
+ 
+Analyzing module <mod4> in library <work>.
+Module <mod4> is correct for synthesis.
+ 
+Analyzing module <mux164> in library <work>.
+Module <mux164> is correct for synthesis.
+ 
+Analyzing module <decoder47> in library <work>.
+Module <decoder47> is correct for synthesis.
+ 
+Analyzing module <mux41> in library <work>.
+Module <mux41> is correct for synthesis.
+ 
+Analyzing module <decoder24> in library <work>.
+Module <decoder24> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <stateMachine>.
+    Related source file is "lab11.v".
+    Found 2-bit register for signal <state>.
+    Found 2-bit 4-to-1 multiplexer for signal <state$mux0000> created at line 235.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <stateMachine> synthesized.
+
+
+Synthesizing Unit <prog_timer>.
+    Related source file is "lab11.v".
+    Found 24-bit down counter for signal <counter>.
+    Found 1-bit register for signal <tp>.
+    Found 1-bit register for signal <zero>.
+    Found 24-bit subtractor for signal <counter$mux0000>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <prog_timer> synthesized.
+
+
+Synthesizing Unit <FF_DCE>.
+    Related source file is "lab11.v".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FF_DCE> synthesized.
+
+
+Synthesizing Unit <mod10counter>.
+    Related source file is "lab11.v".
+    Found 4-bit up counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <mod10counter> synthesized.
+
+
+Synthesizing Unit <adder13>.
+    Related source file is "lab11.v".
+    Found 13-bit adder for signal <sum>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <adder13> synthesized.
+
+
+Synthesizing Unit <down13counter>.
+    Related source file is "lab11.v".
+    Found 13-bit down counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <down13counter> synthesized.
+
+
+Synthesizing Unit <FF_DCE16best>.
+    Related source file is "lab11.v".
+    Found 16-bit register for signal <q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <FF_DCE16best> synthesized.
+
+
+Synthesizing Unit <mod4>.
+    Related source file is "lab11.v".
+    Found 2-bit up counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <mod4> synthesized.
+
+
+Synthesizing Unit <mux164>.
+    Related source file is "lab11.v".
+    Found 4-bit 4-to-1 multiplexer for signal <q>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <mux164> synthesized.
+
+
+Synthesizing Unit <decoder47>.
+    Related source file is "lab11.v".
+    Found 16x7-bit ROM for signal <out>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decoder47> synthesized.
+
+
+Synthesizing Unit <mux41>.
+    Related source file is "lab11.v".
+    Found 1-bit 4-to-1 multiplexer for signal <q>.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux41> synthesized.
+
+
+Synthesizing Unit <decoder24>.
+    Related source file is "lab11.v".
+    Found 4-bit shifter logical right for signal <q>.
+    Summary:
+	inferred   1 Combinational logic shifter(s).
+Unit <decoder24> synthesized.
+
+
+Synthesizing Unit <syncro>.
+    Related source file is "lab11.v".
+Unit <syncro> synthesized.
+
+
+Synthesizing Unit <mscounter>.
+    Related source file is "lab11.v".
+Unit <mscounter> synthesized.
+
+
+Synthesizing Unit <scoringUnit>.
+    Related source file is "lab11.v".
+    Found 16-bit comparator less for signal <greater$cmp_lt0000> created at line 93.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <scoringUnit> synthesized.
+
+
+Synthesizing Unit <controller47>.
+    Related source file is "lab11.v".
+WARNING:Xst:646 - Signal <tp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <controller47> synthesized.
+
+
+Synthesizing Unit <lfsr8bit>.
+    Related source file is "lab11.v".
+    Found 1-bit xor2 for signal <w5a>.
+    Found 1-bit xor2 for signal <w6a>.
+    Found 1-bit xor2 for signal <w7a>.
+Unit <lfsr8bit> synthesized.
+
+
+Synthesizing Unit <delay>.
+    Related source file is "lab11.v".
+WARNING:Xst:646 - Signal <bla> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <delay> synthesized.
+
+
+Synthesizing Unit <game>.
+    Related source file is "lab11.v".
+WARNING:Xst:646 - Signal <w1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <state> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <game> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 13-bit adder                                          : 1
+ 24-bit subtractor                                     : 2
+# Counters                                             : 8
+ 13-bit down counter                                   : 1
+ 2-bit up counter                                      : 1
+ 24-bit down counter                                   : 2
+ 4-bit up counter                                      : 4
+# Registers                                            : 21
+ 1-bit register                                        : 18
+ 16-bit register                                       : 2
+ 2-bit register                                        : 1
+# Comparators                                          : 1
+ 16-bit comparator less                                : 1
+# Multiplexers                                         : 3
+ 1-bit 4-to-1 multiplexer                              : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 4-bit shifter logical right                           : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 13-bit adder                                          : 1
+ 24-bit subtractor                                     : 2
+# Counters                                             : 8
+ 13-bit down counter                                   : 1
+ 2-bit up counter                                      : 1
+ 24-bit down counter                                   : 2
+ 4-bit up counter                                      : 4
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+# Comparators                                          : 1
+ 16-bit comparator less                                : 1
+# Multiplexers                                         : 3
+ 1-bit 4-to-1 multiplexer                              : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 4-bit shifter logical right                           : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <game> ...
+
+Optimizing unit <stateMachine> ...
+
+Optimizing unit <scoringUnit> ...
+
+Optimizing unit <lfsr8bit> ...
+
+Optimizing unit <prog_timer> ...
+
+Optimizing unit <controller47> ...
+WARNING:Xst:2677 - Node <p_timer/tp> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <seg_con/t/tp> of sequential type is unconnected in block <game>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block game, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : game.ngr
+Top Level Output File Name         : game
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 22
+
+Cell Usage :
+# BELS                             : 386
+#      GND                         : 1
+#      INV                         : 51
+#      LUT1                        : 2
+#      LUT2                        : 33
+#      LUT2_D                      : 2
+#      LUT3                        : 87
+#      LUT3_L                      : 1
+#      LUT4                        : 52
+#      LUT4_D                      : 3
+#      MUXCY                       : 86
+#      MUXF5                       : 6
+#      VCC                         : 1
+#      XORCY                       : 61
+# FlipFlops/Latches                : 129
+#      FD                          : 1
+#      FDCE                        : 2
+#      FDCPE                       : 48
+#      FDE                         : 13
+#      FDRE                        : 34
+#      FDRSE                       : 1
+#      FDSE                        : 30
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 8
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      128  out of   4656     2%  
+ Number of Slice Flip Flops:            129  out of   9312     1%  
+ Number of 4 input LUTs:                231  out of   9312     2%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    232     9%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 129   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+clr                                | IBUF                   | 50    |
+N0(XST_GND:G)                      | NONE(p_timer/counter_0)| 48    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.473ns (Maximum Frequency: 133.815MHz)
+   Minimum input arrival time before clock: 4.023ns
+   Maximum output required time after clock: 9.307ns
+   Maximum combinational path delay: 6.434ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.473ns (frequency: 133.815MHz)
+  Total number of paths / destination ports: 3915 / 214
+-------------------------------------------------------------------------
+Delay:               7.473ns (Levels of Logic = 4)
+  Source:            p_timer/zero (FF)
+  Destination:       mscnt/m3/q_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: p_timer/zero to mscnt/m3/q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            14   0.591   1.079  p_timer/zero (p_timer/zero)
+     LUT2_D:I1->LO         1   0.704   0.104  mscnt/m4/q_or000011_SW0 (N38)
+     LUT4:I3->O            7   0.704   0.712  mscnt/m4/q_or000011 (mscnt/w1)
+     LUT4:I3->O            6   0.704   0.673  mscnt/m3/clken_and0000 (mscnt/w3)
+     LUT4:I3->O            4   0.704   0.587  mscnt/m3/q_or00001 (mscnt/m3/q_or0000)
+     FDRE:R                    0.911          mscnt/m3/q_0
+    ----------------------------------------
+    Total                      7.473ns (4.318ns logic, 3.155ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 96 / 95
+-------------------------------------------------------------------------
+Offset:              4.023ns (Levels of Logic = 3)
+  Source:            clr (PAD)
+  Destination:       fsm/state_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: clr to fsm/state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           143   1.218   1.472  clr_IBUF (clr_IBUF)
+     LUT4:I0->O            1   0.704   0.000  fsm/state_mux0000<1>_F (N35)
+     MUXF5:I0->O           1   0.321   0.000  fsm/state_mux0000<1> (fsm/state_mux0000<1>1)
+     FD:D                      0.308          fsm/state_0
+    ----------------------------------------
+    Total                      4.023ns (2.551ns logic, 1.472ns route)
+                                       (63.4% logic, 36.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 433 / 13
+-------------------------------------------------------------------------
+Offset:              9.307ns (Levels of Logic = 5)
+  Source:            sb3/ff2/q (FF)
+  Destination:       C<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: sb3/ff2/q to C<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q            16   0.591   1.209  sb3/ff2/q (sb3/ff2/q)
+     LUT3:I0->O            1   0.704   0.499  scoring/SCout<7>1 (scoreout<7>)
+     LUT3:I1->O            1   0.704   0.000  seg_con/m16/Mmux_q_33 (seg_con/m16/Mmux_q_33)
+     MUXF5:I1->O           7   0.321   0.883  seg_con/m16/Mmux_q_2_f5_2 (seg_con/w2<3>)
+     LUT4:I0->O            1   0.704   0.420  seg_con/d1/Mrom_out21 (C_2_OBUF)
+     OBUF:I->O                 3.272          C_2_OBUF (C<2>)
+    ----------------------------------------
+    Total                      9.307ns (6.296ns logic, 3.011ns route)
+                                       (67.6% logic, 32.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Delay:               6.434ns (Levels of Logic = 4)
+  Source:            dp<3> (PAD)
+  Destination:       dd (PAD)
+
+  Data Path: dp<3> to dd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.499  dp_3_IBUF (dp_3_IBUF)
+     LUT3:I1->O            1   0.704   0.000  seg_con/m41/Mmux_q_41 (seg_con/m41/Mmux_q_4)
+     MUXF5:I0->O           1   0.321   0.420  seg_con/m41/Mmux_q_2_f5 (dd_OBUF)
+     OBUF:I->O                 3.272          dd_OBUF (dd)
+    ----------------------------------------
+    Total                      6.434ns (5.515ns logic, 0.919ns route)
+                                       (85.7% logic, 14.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.12 secs
+ 
+--> 
+
+Total memory usage is 264704 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym finalcombined {J:/ecen 220/lab4/lab4/finalcombined.sch} {J:/ecen 220/lab4/lab4/finalcombined.sym} 

@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "J:/ecen 220/lab6/lab6/FF_DC.xst" -ofn "J:/ecen 220/lab6/lab6/FF_DC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toggle.ucf -p xc3s500e-fg320-4 "FF_DC.ngc" FF_DC.ngd  
+xst -intstyle ise -ifn "J:/ecen 220/lab6/lab6/FF_DC.xst" -ofn "J:/ecen 220/lab6/lab6/FF_DC.syr" 
+xst -intstyle ise -ifn "J:/ecen 220/lab6/lab6/FF_DC.xst" -ofn "J:/ecen 220/lab6/lab6/FF_DC.syr" 
+xst -intstyle ise -ifn "J:/ecen 220/lab6/lab6/FF_DC.xst" -ofn "J:/ecen 220/lab6/lab6/FF_DC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toggle.ucf -p xc3s500e-fg320-4 "FF_DC.ngc" FF_DC.ngd  
+xst -intstyle ise -ifn "J:/ecen 220/lab6/lab6/FF_DC.xst" -ofn "J:/ecen 220/lab6/lab6/FF_DC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toggle.ucf -p xc3s500e-fg320-4 "FF_DC.ngc" FF_DC.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o FF_DC_map.ncd FF_DC.ngd FF_DC.pcf 
+par -w -intstyle ise -ol high -t 1 FF_DC_map.ncd FF_DC.ncd FF_DC.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FF_DC.twx FF_DC.ncd -o FF_DC.twr FF_DC.pcf -ucf toggle.ucf 
+bitgen -intstyle ise -f FF_DC.ut FF_DC.ncd 

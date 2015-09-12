@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym newrom {J:/ecen 220/lab4/lab4/newrom.sch} {J:/ecen 220/lab4/lab4/newrom.sym} 

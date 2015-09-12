@@ -1,0 +1,4 @@
+NET "Alarm"  LOC = "R4";  # Bank = 3, Pin name = IO/VREF_3, Type = VREF, Sch name = LD7
+NET "Seat" LOC = "L13"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW5
+NET "Key" LOC = "N17"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW6
+NET "Door" LOC = "R17"; # Bank = 1, Pin name = IP, Type = INPUT, Sch name = SW7

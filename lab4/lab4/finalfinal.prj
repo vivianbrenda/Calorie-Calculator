@@ -1,0 +1,4 @@
+verilog work "newrom.vf"
+verilog work "abc.vf"
+verilog work "finalcombined.vf"
+verilog work "finalfinal.vf"

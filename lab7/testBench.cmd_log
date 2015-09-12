@@ -1,0 +1,26 @@
+xst -intstyle ise -ifn "J:/ecen 220/lab7/testBench.xst" -ofn "J:/ecen 220/lab7/testBench.syr" 
+xst -intstyle ise -ifn "J:/ecen 220/lab7/testBench.xst" -ofn "J:/ecen 220/lab7/testBench.syr" 
+xst -intstyle ise -ifn "J:/ecen 220/lab7/testBench.xst" -ofn "J:/ecen 220/lab7/testBench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "testBench.ngc" testBench.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o testBench_map.ncd testBench.ngd testBench.pcf 
+par -w -intstyle ise -ol high -t 1 testBench_map.ncd testBench.ncd testBench.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml testBench.twx testBench.ncd -o testBench.twr testBench.pcf 
+bitgen -intstyle ise -f testBench.ut testBench.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab7/testBench.xst" -ofn "J:/ecen 220/lab7/testBench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "testBench.ngc" testBench.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o testBench_map.ncd testBench.ngd testBench.pcf 
+par -w -intstyle ise -ol high -t 1 testBench_map.ncd testBench.ncd testBench.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml testBench.twx testBench.ncd -o testBench.twr testBench.pcf 
+bitgen -intstyle ise -f testBench.ut testBench.ncd 
+bitgen -intstyle ise -f testBench.ut testBench.ncd 
+xst -intstyle ise -ifn "J:/ecen 220/lab7/testBench.xst" -ofn "J:/ecen 220/lab7/testBench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 "testBench.ngc" testBench.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o testBench_map.ncd testBench.ngd testBench.pcf 
+par -w -intstyle ise -ol high -t 1 testBench_map.ncd testBench.ncd testBench.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml testBench.twx testBench.ncd -o testBench.twr testBench.pcf 
+bitgen -intstyle ise -f testBench.ut testBench.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testbench.ucf -p xc3s500e-fg320-5 "testBench.ngc" testBench.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o testBench_map.ncd testBench.ngd testBench.pcf 
+par -w -intstyle ise -ol high -t 1 testBench_map.ncd testBench.ncd testBench.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml testBench.twx testBench.ncd -o testBench.twr testBench.pcf -ucf testbench.ucf 
+bitgen -intstyle ise -f testBench.ut testBench.ncd 

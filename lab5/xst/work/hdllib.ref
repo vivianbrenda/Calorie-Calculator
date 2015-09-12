@@ -1,0 +1,6 @@
+MO carryControl NULL lab5.v vlg02/carry_control.bin 1424205213
+MO fullAdder NULL lab5.v vlg13/full_adder.bin 1424205213
+MO ALU4bit NULL lab5.v vlg01/_a_l_u4bit.bin 1424205213
+MO mux21 NULL lab5.v vlg21/mux21.bin 1424205213
+MO ALU1bit NULL lab5.v vlg0A/_a_l_u1bit.bin 1424205213
+MO mux41 NULL lab5.v vlg2B/mux41.bin 1424205213

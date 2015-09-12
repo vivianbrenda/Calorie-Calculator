@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "J:/ecen 220/lab 10/lab10/scoringUnit_isim_beh.exe" -prj "J:/ecen 220/lab 10/lab10/scoringUnit_beh.prj" "work.scoringUnit" "work.glbl" 
